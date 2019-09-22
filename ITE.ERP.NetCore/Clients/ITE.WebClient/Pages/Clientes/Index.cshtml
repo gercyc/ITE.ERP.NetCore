@@ -1,0 +1,250 @@
+﻿@page
+@model ITE.WebClient.Pages.Clientes.IndexModel
+
+@{
+    ViewData["Title"] = "Clientes e Fornecedores";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1 class="h3 mb-2 text-gray-800">Clientes e Fornecedores</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<div class="card-body">
+    <div class="table-responsive">
+
+        <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+            <div class="row">
+                <div class="col-sm-12">
+
+
+                    <table class="table table-bordered dataTable" id="dataTable" role="grid" aria-describedby="dataTable_info" style="width: 100%;" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].RazaoSocial)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].NomeFantasia)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].CpfCnpj)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Email)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Telefone)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].DataSituacao)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].SituacaoJuridica)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Abertura)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].NaturezaJuridica)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].UltimaAtualizacao)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].StatusCliente)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Efr)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].MotivoSituacao)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].SituacaoEspecial)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].DataSituacaoEspecial)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].CapitalSocial)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].NomeEndereco)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].NumeroEndereco)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Bairro)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Complemento)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Cep)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Uf)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Cidade)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].TipoEndereco)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].TipoCliente)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].DataNascimento)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].RG)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Celular)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].TelefoneComercial)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].DtRegtroJuntaCom)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].DtCadastro)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].InscricaoEstadual)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].InscricaoMunicipal)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Customer[0].Pais)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Customer)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RazaoSocial)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NomeFantasia)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CpfCnpj)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Telefone)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DataSituacao)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SituacaoJuridica)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Abertura)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NaturezaJuridica)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.UltimaAtualizacao)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.StatusCliente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Efr)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MotivoSituacao)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SituacaoEspecial)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DataSituacaoEspecial)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CapitalSocial)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NomeEndereco)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NumeroEndereco)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Bairro)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Complemento)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cep)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Uf)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cidade)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TipoEndereco)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TipoCliente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DataNascimento)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RG)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Celular)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TelefoneComercial)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DtRegtroJuntaCom)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DtCadastro)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.InscricaoEstadual)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.InscricaoMunicipal)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Pais)
+                                    </td>
+                                    <td>
+                                        <a asp-page="./Edit" asp-route-id="@item.IdCliFor">Edit</a> |
+                                        <a asp-page="./Details" asp-route-id="@item.IdCliFor">Details</a> |
+                                        <a asp-page="./Delete" asp-route-id="@item.IdCliFor">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+
+        </div>
+    </div>
+
+</div>
