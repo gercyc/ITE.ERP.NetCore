@@ -20,7 +20,7 @@ namespace ITSolution.Framework.Servers.Core.FirstAPI.BaseAPIs
         private readonly CustomerContext _context;
         public CustomerController()
         {
-            _context = new CustomerContext(new ITSDbContextOptions());
+            _context = new CustomerContext();
         }
 
         // GET api/values

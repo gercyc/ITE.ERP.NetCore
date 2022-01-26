@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>ITSolution.Framework.Servers.Core.ApiMenu</RootNamespace>
     <AssemblyName>ITSolution.Framework.Servers.Core.ApiMenu</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ITSolution.Framework.Core.Server" Version="1.0.1" />
+    <PackageReference Include="ITSolution.Framework.Core.Server" Version="1.0.7" />
   </ItemGroup>
 
   <ItemGroup>

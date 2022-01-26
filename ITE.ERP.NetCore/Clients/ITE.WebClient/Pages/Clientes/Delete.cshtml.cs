@@ -17,7 +17,7 @@ namespace ITE.WebClient.Pages.Clientes
 
         public DeleteModel()
         {
-            _context = new CustomerContext(new ITSDbContextOptions());
+            _context = new CustomerContext();
         }
 
         [BindProperty]

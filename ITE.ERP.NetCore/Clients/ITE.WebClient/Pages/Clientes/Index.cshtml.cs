@@ -17,7 +17,7 @@ namespace ITE.WebClient.Pages.Clientes
 
         public IndexModel()
         {
-            _context = new CustomerContext(new ITSDbContextOptions());
+            _context = new CustomerContext();
         }
 
         public IList<Customer> Customer { get;set; }

@@ -9,24 +9,30 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using ITSolution.Framework.Core.Server.BaseClasses.Repository;
 
 namespace ITSolution.Framework.Core.CustomUserAPI.Data
 {
     /// <summary>
     /// Customize your context
     /// </summary>
-    public class DBAccessContext : ITSolutionContext
+    public class DBAccessContext : ItSolutionBaseContext
     {
 
-        public DBAccessContext(ITSDbContextOptions itsDbContextOptions) : base(itsDbContextOptions)
+        public DBAccessContext(ItsDbContextOptions itsDbContextOptions) : base(itsDbContextOptions)
         {
-            this.ITSDbContextOptions = itsDbContextOptions;
+            Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+            
+            modelBuilder.Entity<ItsMenu>()
+                        .ToTable("ITS_MENU", "dbo");
         }
 
         public DbSet<ItsMenu> MenuSet { get; set; }

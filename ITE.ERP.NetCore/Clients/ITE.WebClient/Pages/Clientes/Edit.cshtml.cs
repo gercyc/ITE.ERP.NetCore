@@ -18,7 +18,7 @@ namespace ITE.WebClient.Pages.Clientes
 
         public EditModel()
         {
-            _context = new CustomerContext(new ITSDbContextOptions());
+            _context = new CustomerContext();
         }
 
         [BindProperty]

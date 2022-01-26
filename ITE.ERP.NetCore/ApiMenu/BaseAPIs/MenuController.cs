@@ -20,7 +20,7 @@ namespace ITSolution.Framework.Servers.Core.FirstAPI.BaseAPIs
         private readonly DBAccessContext _context;
         public MenuController()
         {
-            _context = new DBAccessContext(new ITSDbContextOptions());
+            _context = new DBAccessContext(new Framework.Core.Server.BaseClasses.Repository.ItsDbContextOptions());
         }
 
         // GET api/values

@@ -17,7 +17,7 @@ namespace ITE.WebClient.Pages.Clientes
 
         public CreateModel()
         {
-            _context = new CustomerContext(new ITSDbContextOptions());
+            _context = new CustomerContext();
         }
 
         public IActionResult OnGet()

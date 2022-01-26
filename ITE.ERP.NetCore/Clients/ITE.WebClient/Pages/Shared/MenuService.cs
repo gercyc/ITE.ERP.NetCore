@@ -33,7 +33,7 @@ namespace ITE.WebClient.Pages.Shared
             get
             {
                 if (_Menus == null)
-                    _Menus = new DBAccessContext(new ITSDbContextOptions()).MenuRep.GetAll().ToList();
+                    _Menus = new DBAccessContext(new ITSolution.Framework.Core.Server.BaseClasses.Repository.ItsDbContextOptions()).MenuRep.GetAll().ToList();
 
                 return _Menus;
             }

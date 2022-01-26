@@ -1,4 +1,5 @@
-﻿using ITSolution.Framework.Server.Core.BaseClasses.Repository;
+﻿using ITSolution.Framework.Core.Server.BaseClasses.Repository;
+using ITSolution.Framework.Server.Core.BaseClasses.Repository;
 using ITSolution.Framework.Server.Core.BaseEnums;
 using ITSolution.Framework.Server.Core.BaseInterfaces;
 using ITSolution.Framework.Servers.Core.CustomerApi.Model;
@@ -15,15 +16,16 @@ namespace ITSolution.Framework.Core.CustomUserAPI.Data
     /// <summary>
     /// Customize your context
     /// </summary>
-    public class CustomerContext : ITSolutionContext
+    public class CustomerContext : ItSolutionBaseContext
     {
-        public CustomerContext() : base(new ITSDbContextOptions())
+        public CustomerContext() : base(new ItsDbContextOptions())
         {
-
+            Database.EnsureCreated();
+            Database.Migrate();
         }
-        public CustomerContext(ITSDbContextOptions itsDbContextOptions) : base(itsDbContextOptions)
+        public CustomerContext(ItsDbContextOptions itsDbContextOptions) : base(itsDbContextOptions)
         {
-            this.ITSDbContextOptions = itsDbContextOptions;
+            
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -12,9 +12,10 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "WEBSITE_LOAD_USER_PROFILE": "1",
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "WEBSITE_LOAD_USER_PROFILE": "1"
+      },
+      "sqlDebugging": false
     },
     "ITE.WebClient": {
       "commandName": "Project",

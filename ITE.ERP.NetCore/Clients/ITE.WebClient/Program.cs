@@ -7,6 +7,7 @@ using ITSolution.Framework.BaseClasses;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.Server.Features;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -22,6 +23,7 @@ namespace ITE.WebClient
             _webHost = CreateWebHostBuilder(args).Build();
             
             IServerAddressesFeature serverAddressesFeature = _webHost.ServerFeatures.Get<IServerAddressesFeature>();
+            
             _webHost.Run();
         }
 
@@ -31,7 +33,7 @@ namespace ITE.WebClient
 
             _webHostBuilder = WebHost.CreateDefaultBuilder(args).UseUrls(url)
                 .UseStartup<Startup>();
-            
+            _webHostBuilder.UseEnvironment("Development");
             return _webHostBuilder;
         }
     }
